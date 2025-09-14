@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 File Upload Portal 🔥</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #ff416c, #ff4b2b, #1e3c72, #2a5298);
+      background-size: 300% 300%;
+      animation: bgAnimation 10s infinite alternate;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      color: #fff;
+    }
+
+    @keyframes bgAnimation {
+      0% { background-position: left; }
+      100% { background-position: right; }
+    }
+
+    .upload-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(15px);
+      border-radius: 20px;
+      padding: 40px;
+      text-align: center;
+      width: 400px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      font-size: 28px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    input[type="file"] {
+      display: none;
+    }
+
+    label {
+      display: inline-block;
+      padding: 12px 25px;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    label:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255,255,255,0.3);
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 30px;
+      border: none;
+      outline: none;
+      font-size: 16px;
+      color: #fff;
+      background: linear-gradient(135deg, #1e3c72, #2a5298);
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255,255,255,0.3);
+    }
+  </style>
+</head>
+<body>
+  <div class="upload-card">
+    <h1>🔥 Upload Zone 🔥</h1>
+    <form action="/upload" method="post" enctype="multipart/form-data">
+      <input type="file" name="myimage" id="fileInput" required>
+      <label for="fileInput">Choose File 📂</label><br>
+      <button type="submit">Upload 🚀</button>
+    </form>
+  </div>
+</body>
+</html>
